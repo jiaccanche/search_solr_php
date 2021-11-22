@@ -1,0 +1,136 @@
+:root {
+    --font-primary: 'Roboto';
+    --font-secondary: 'Lato';
+    --white: #FAFAFA;
+    --gray: #C1C7C9;
+    --black: #000000;
+}
+
+/* Add your CSS code below */
+body {
+    background-color: var(--white);
+    background: url(https://upload.wikimedia.org/wikipedia/commons/e/e3/Wikipedia_logo_letters_banner.svg);
+    font-family: var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--white);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 8px;
+    border-right: 2px solid var(--white);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+main {
+    width: 100%;
+}
+
+.buscador {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.buscador > div {
+    border: 2px solid #C1C7C9;
+    border-radius: 12px;
+    width: 60%;
+    margin: auto;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: groove;
+    background-color: #fff;
+}
+
+.searchBar {
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    font-size: 18px;
+    margin: 0 2px;
+}
+
+.searchBtn {
+    background-color: transparent;
+    margin: 5px 10px;
+    height: 15px;
+    font-size: 18px;
+    border-style: none; 
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtros > p {
+    font-size: 20px;
+}
+
+.filtros > select {
+    font-size: 18px;
+}
+
+table {
+    background-color: rgba(27, 27, 27, 0.116);
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+tbody {
+    border-bottom: black 2px solid;
+}
+
+tbody > tr > th {
+    font-size: 18px;
+}
+
+table > tr:hover {
+   background-color: var(--white); 
+}
+
+tr > td {
+    font-size: 18px;
+    text-align:center;
+    border-bottom: ridge;
+}
+
+.description {
+    text-align: justify;
+}
+
+#count {
+    width: 80%;
+    margin: 20px auto; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.textAreaUrls {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.autoComplete {
+    width: 48% !important;
+    margin: auto !important;
+}
