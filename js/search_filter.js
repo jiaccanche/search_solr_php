@@ -14,7 +14,7 @@ function search_filter() {
   results = null;
   let palabraBuscar = document.getElementById("inputSearch").value;
   let wrapper = document.getElementById('search_filter_container');
-  let urlBusqueda = `buscador.php?consulta=${palabraBuscar}`;
+  let urlBusqueda = `php/Search.php?request=${palabraBuscar}`;
   let filters = '';
   let document_index = 0;
   esp_elements = [];
