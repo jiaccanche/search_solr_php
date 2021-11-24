@@ -15,8 +15,9 @@ function read() {
 }
 
 function search(palabraBuscar){
-    let urlBusqueda = 'buscador.php?consulta=' + palabraBuscar;
+    let urlBusqueda = 'php/Search.php?request=' + palabraBuscar;
     get(urlBusqueda).then(function(response) {
+        console.log(response);
         let tabla = initializeTable(response);
         let foo = document.getElementById("resultados");
         if (foo.hasChildNodes()) {
