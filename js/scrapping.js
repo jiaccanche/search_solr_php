@@ -15,9 +15,10 @@ function scrapping() {
             urls = urls + "," + lines[i];
         }
     }
-    let urlScrapping = 'webScrapping.php?urls=' + urls;
+    let urlScrapping = 'php/WebScrapping.php?urls=' + urls;
     get(urlScrapping).then(function(response) {
-        //console.log(response);
+        debugger
+        console.log("response",response);
         alert("Resultados indizados");
     }, function(error) {
         alert("Se ha producido un error, intente más tarde.");

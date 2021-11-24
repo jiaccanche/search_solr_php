@@ -15,8 +15,9 @@ function read() {
 }
 
 function search(palabraBuscar){
-    let urlBusqueda = 'buscador.php?consulta=' + palabraBuscar;
+    let urlBusqueda = 'php/Search.php?request=' + palabraBuscar;
     get(urlBusqueda).then(function(response) {
+        //console.log(response);
         let tabla = initializeTable(response);
         let foo = document.getElementById("resultados");
         if (foo.hasChildNodes()) {
@@ -52,7 +53,7 @@ function get(url) {
 
 function initializeTable(data) {
     data = JSON.parse(data);
-    data = JSON.parse(data);
+    console.log(data);
     documents = data['response']['docs'];
     let weights = data.debug.explain;
 
