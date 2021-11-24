@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\ConnectException;
 class CrawlerService
 {
 
-    private $urlSorl = "http://localhost:8983/solr/start/update/extract?commit=true";
+    private $urlSorl = "http://localhost:8983/solr/briw_pro/update/extract?commit=true";
 
     public function crawlingProcess($urls){
         $urls = explode(",", $urls);

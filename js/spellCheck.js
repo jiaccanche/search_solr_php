@@ -4,7 +4,7 @@ function spellCheck() {
     let palabraBuscar = document.getElementById("inputSearch").value;
     var wrapper = document.getElementById('spellCheck');
     wrapper.innerHTML = '';
-      let urlBusqueda = 'php/proxy_sc.php?data=' + palabraBuscar;
+      let urlBusqueda = 'php/SpellCheck.php?data=' + palabraBuscar;
       get(urlBusqueda).then(function(response) {
         if ( JSON.parse(response).spellcheck.suggestions.length>0) {
           let suggestions = JSON.parse(response).spellcheck.suggestions[1].suggestion;

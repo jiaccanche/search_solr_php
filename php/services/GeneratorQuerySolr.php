@@ -3,7 +3,7 @@
 class GeneratorQuerySolr
 {
     private $dictionary = array("and", "or","not");
-    private $baseQuery = 'http://localhost:8983/solr/start/selectCheck?debug.explain.structured=true&debugQuery=on&df=attr_text&hl.fl=attr_text&hl=true&q=';
+    private $baseQuery = 'http://localhost:8983/solr/briw_pro/selectCheck?debug.explain.structured=true&debugQuery=on&df=attr_text&hl.fl=attr_text&hl=true&q=';
     private $accentVocals = array ("á","é","í","ó","ú","Á","É","Í","Ó","Ú","ñ","Ñ");
     private $vocals = array ("a","e","i","o","u","A","E","I","O","U","n","N");
 
