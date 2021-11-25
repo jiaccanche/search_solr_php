@@ -25,17 +25,23 @@ function search_filter() {
   get(urlBusqueda).then(function (response) {
     results = JSON.parse(JSON.parse(response));
     rawData = results;
+    console.log(results['response']['docs']);
     results['response']['docs'].forEach(element => {
       let author_tag = element['attr_meta'][35];
-      let lenguaje_tag = element['attr_meta'][47];
+      // let lenguaje_tag = element['attr_meta'][47];
+      // let lenguaje_tag = element['attr_meta'][51];
+      let lenguaje_tag = element['attr_content_language'];
+      // console.log(element['attr_content_language']);
       let image_tag = element['attr_meta'][0];
 
       if (typeof author_tag !== 'undefined') {
         auth_elements.push(document_index);
       }
-      if ((typeof lenguaje_tag !== 'undefined') && (lenguaje_tag == 'es_MX')) {
+      
+      if ((typeof lenguaje_tag !== 'undefined') && (lenguaje_tag == 'es')) {
         esp_elements.push(document_index);
       }
+
       if ((typeof image_tag !== 'undefined') && (image_tag == 'og:image')) {
         image_elements.push(document_index);
       }
@@ -58,6 +64,8 @@ function search_filter() {
 
 function initializeFilteredTable(data) {
   documents = data;
+    console.log(data);
+
   let weights = 1//data.debug.explain;
 
   var table = document.createElement("table");
@@ -89,7 +97,7 @@ function initializeFilteredTable(data) {
     }
 
   } else {
-    table.innerHTML = "Sin resultados";
+    table.innerHTML = "No se encontraron resultados";
   }
   return table;
 }

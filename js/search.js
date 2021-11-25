@@ -12,23 +12,29 @@ function read() {
         return;
     }
     search(palabraBuscar);
+
 }
 
 function search(palabraBuscar){
     let urlBusqueda = 'php/Search.php?request=' + palabraBuscar;
+    
     get(urlBusqueda).then(function(response) {
-        //console.log(response);
+        // console.log(response);
+      
         let tabla = initializeTable(response);
         let foo = document.getElementById("resultados");
+      
         if (foo.hasChildNodes()) {
             while ( foo.childNodes.length >= 1 ){
                 foo.removeChild( foo.firstChild );
             }
         }
         foo.appendChild(tabla);
+      
     }, function(error) {
         alert("Se ha producido un error, intente más tarde.")
     })
+
 }
 
 
@@ -52,8 +58,10 @@ function get(url) {
 }
 
 function initializeTable(data) {
-    data = JSON.parse(data);
-    console.log(data);
+    // data = JSON.parse(data);
+    data = JSON.parse(JSON.parse(data));
+
+    // console.log(data['response']);
     documents = data['response']['docs'];
     let weights = data.debug.explain;
 
@@ -61,8 +69,6 @@ function initializeTable(data) {
     var thead = table.createTHead();
     var tbody = table.createTBody();
     var tam = data['response']['numFound'];
-
-    // console.log(data);
 
     if (documents.length > 0) {
         var cabecera = thead.insertRow(-1);
@@ -76,7 +82,7 @@ function initializeTable(data) {
         for (var i = 0; i < tam; i++) {
             tr = tbody.insertRow(-1);
             var tabCell = tr.insertCell(-1);
-            console.log(documents[i]['attr_url'][0])
+            // console.log(documents[i]['attr_url'][0])
             tabCell.innerHTML = '<a href="' + documents[i]['attr_url'][0] + '">' +
              documents[i]['attr_title'][0] + '</a>';
             tabCell = tr.insertCell(-1);

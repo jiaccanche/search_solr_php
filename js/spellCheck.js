@@ -6,13 +6,14 @@ function spellCheck() {
     wrapper.innerHTML = '';
       let urlBusqueda = 'php/SpellCheck.php?data=' + palabraBuscar;
       get(urlBusqueda).then(function(response) {
+        
         if ( JSON.parse(response).spellcheck.suggestions.length>0) {
           let suggestions = JSON.parse(response).spellcheck.suggestions[1].suggestion;
           let suggestion = suggestions[0].word;
           let h1 = document.createElement('p');
           h1.setAttribute('class', 'correction');
           h1.setAttribute('id', suggestion);
-          h1.textContent = "Quziste decir "+suggestion+ "?";
+          h1.textContent = "¿Tal vez quisiste decir "+suggestion+ "?";
           h1.addEventListener("click", correct);
           wrapper.appendChild(h1);
         }
