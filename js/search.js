@@ -62,7 +62,7 @@ function initializeTable(data) {
     var tbody = table.createTBody();
     var tam = data['response']['numFound'];
 
-    //console.log(data);
+    // console.log(data);
 
     if (documents.length > 0) {
         var cabecera = thead.insertRow(-1);

@@ -21,12 +21,12 @@ function voiceRecognition(){
 	if (microAceptado == false) {
 	window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
 		if (!'SpeechRecognition' in window) {
-			alert("que pena, no podes usar la API")
+			alert("No puedes usar la API")
 		}  
 	}
 	document.querySelector(".voice-search__result-text").innerHTML = "Habla ahora";
     let recognition = new window.SpeechRecognition();
-
+	recognition.lang = 'es-MX';
     recognition.onresult = (event) => {
       let voiceText = event.results[0][0].transcript;
       document.querySelector(".voice-search__result-text").innerHTML = voiceText;
