@@ -44,9 +44,9 @@ function search_filter() {
     })
 
     filters = `<div class="filters-container">
-                <button onclick="filteredTable('esp')">En español(${esp_elements.length})</button>
-                <button onclick="filteredTable('auth')">Con autor(${auth_elements.length})</button>
-                <button onclick="filteredTable('image')">Con imagenes(${image_elements.length})</button>
+                <button onclick="filteredTable('esp')">Español(${esp_elements.length})</button>
+                <button onclick="filteredTable('auth')">Autor(${auth_elements.length})</button>
+                <button onclick="filteredTable('image')">Imagenes(${image_elements.length})</button>
               </div>`;
 
     wrapper.innerHTML = filters;

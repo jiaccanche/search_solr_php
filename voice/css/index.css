@@ -13,7 +13,7 @@ ul, a {
 
 .form__microphone-icon {
 border: 0;
-background: url(../img/google-microfono.svg) no-repeat center;
+background: url(../img/micro.png) no-repeat center;
 background-size: 21px 21px;
 cursor: pointer;
 padding: 22px 12px 0;
@@ -27,14 +27,16 @@ vertical-align: center;
 .voice-search {
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+	height: 10vh;
 	background-color: #fff;
 	display: flex;
 	z-index: 99999;
     align-items: center;
     justify-content: center;
     display: none;
-    padding: 0 10vw
+    padding: 0 10vw;
+	top: 20%;
+    /* left: 35%; */
 }
 
 .voice-search__result, .voice-search__animation {
@@ -52,7 +54,7 @@ vertical-align: center;
 }
 
 .voice-search__microphone-icon {
-	color: #f44;
+	color: #000;
 	font-size: 80px;
 	height: 180px;
 	width: 180px;
@@ -66,7 +68,7 @@ vertical-align: center;
 
 .voice-search__microphone-icon:hover {
 	color: #fff;
-	background-color: #f44;
+	background-color: #000;
 }
 
 .voice-search__microphone-border {

@@ -9,7 +9,7 @@
 /* Add your CSS code below */
 body {
     background-color: var(--white);
-    background: url(https://upload.wikimedia.org/wikipedia/commons/e/e3/Wikipedia_logo_letters_banner.svg);
+    background: url(http://creamostuvideo.com/wp-content/uploads/2015/03/fondo-2-2.jpg);
     font-family: var(--font-primary);
     display: flex;
     flex-direction: column;
@@ -29,6 +29,8 @@ body::-webkit-scrollbar-thumb {
 
 h1 {
     font-size: 80px;
+    color: #FAFAFA;
+
 }
 
 main {
@@ -36,43 +38,46 @@ main {
 }
 
 .buscador {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: auto;
 }
-
+    /* cuadro del buscador */
 .buscador > div {
-    border: 2px solid #C1C7C9;
-    border-radius: 12px;
+    border: 2px solid #00ea19;
+    /* border-radius: 12px; */
     width: 60%;
     margin: auto;
 }
 
 .searchForm {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-style: groove;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* border-style: groove; */
     background-color: #fff;
 }
 
 .searchBar {
     width: 100%;
     height: 30px;
+    /* justify-content: center; */
     border-style: none;
     font-size: 18px;
-    margin: 0 2px;
+    /* margin: 0 2px; */
 }
 
 .searchBtn {
     background-color: transparent;
-    margin: 5px 10px;
-    height: 15px;
-    font-size: 18px;
-    border-style: none; 
-}
+    /* color: #00ea19; */
 
+    margin: 5px 10px;
+    height: 18px;
+    /* font-size: 18px; */
+    /* border-style: none;  */
+}
+/* 
 .filtros {
     display: flex;
     align-items: center;
@@ -85,52 +90,73 @@ main {
 
 .filtros > select {
     font-size: 18px;
-}
+} */
 
 table {
-    background-color: rgba(27, 27, 27, 0.116);
-    width: 80%;
-    margin: 20px auto;
+    position: absolute;
+    top: 34%;
+    /* top: 34%; */
+    background-color: #00ea19;
+    width: 59.55%;
+    margin: 80px 191px;
     border-collapse: collapse;
 }
-
+/* 
 tbody {
     border-bottom: black 2px solid;
 }
 
 tbody > tr > th {
     font-size: 18px;
-}
-
+} */
+/* 
 table > tr:hover {
    background-color: var(--white); 
-}
+} */
 
 tr > td {
     font-size: 18px;
-    text-align:center;
-    border-bottom: ridge;
+    /* text-align:center; */
+    /* border-bottom: ridge; */
 }
 
-.description {
+/* .description {
     text-align: justify;
-}
+} */
 
-#count {
+/* #count {
     width: 80%;
     margin: 20px auto; 
     font-size: 20px;
     font-weight: bold;
-}
+} */
 
 .textAreaUrls {
-    width: 80%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 
+
+.textAreaBtn {
+    background-color: #00ea19;
+    margin: 50px 300px;
+    height: 50px;
+
+    
+    font-size: 20px;
+    /* font: 'century'; */
+    font-weight: bold;
+    /* width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto; */
+}
+
+
+
 .autoComplete {
-    width: 48% !important;
+    width: 60% !important;
     margin: auto !important;
 }

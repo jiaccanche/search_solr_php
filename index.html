@@ -20,13 +20,21 @@
     <main>
         <div class="buscador">
             <div class="searchForm" id="searchForm">
-                <img src="img/lupa.svg" id="btn" class="searchBtn">
-                <input type="search" id="inputSearch" class="searchBar" placeholder="Introduce tu búsqueda aquí" oninput="autoComplete()">
-                <button class="form__microphone-icon" type="button" title="Búsqueda por voz"></button>
+                <!-- <img src="img/lupa.svg" id="btn" class="searchBtn"> -->
+                <input type="search" id="inputSearch" class="searchBar" placeholder="Escriba algo..." oninput="autoComplete()">
+                
+
+                <button  class="form__microphone-icon" type="button" title="Búsqueda por voz"></button>
+                <!-- <img src="img/micro.png" class="searchBtn"> -->
+                
+                <img src="img/lupa.png" id="btn" class="searchBtn">
                 <!-- <input type="button" id="btn" class="searchBtn" value="Buscar"> -->
             </div>
         </div>
         <div id="autoComplete" class="autoComplete"></div>
+        <!-- <script>
+
+        </script> -->
         <div id="spellCheck"></div>
         <div id="count"></div>
         <div id="resultados"></div>
