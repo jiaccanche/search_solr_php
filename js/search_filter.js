@@ -77,7 +77,7 @@ function initializeFilteredTable(data) {
 
   if (documents.length > 0) {
     var cabecera = thead.insertRow(-1);
-    var titulos = ['Título', 'Descripción', 'Debug'];
+    var titulos = ['Título', 'Descripción', 'Puntaje'];
     for (var i = 0; i < 3; i++) {
       var th = document.createElement("th");
       th.innerHTML = titulos[i];
